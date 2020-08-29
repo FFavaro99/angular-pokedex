@@ -1,0 +1,23 @@
+.wrapper {
+  padding: 0.5rem 1rem;
+  border: 2px solid #cccccc;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.wrapper:hover {
+  background-color: rgb(145, 207, 248);
+  cursor: pointer;
+}
+
+
+h1 {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #555555;
+  align-self: center;
+}

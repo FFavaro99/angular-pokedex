@@ -1,0 +1,6 @@
+
+.pokedex {
+  overflow-y: scroll;
+  height: 92vh;
+  width: 50vw;
+}

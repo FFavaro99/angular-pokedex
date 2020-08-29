@@ -1,0 +1,15 @@
+
+header {
+  display: flex;
+  padding: 1rem;
+  background-color: #4aacec;
+  align-content: center;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header h1 {
+  color: #fff;
+}
