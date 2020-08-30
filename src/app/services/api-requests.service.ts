@@ -35,7 +35,11 @@ export class ApiRequestsService {
     return this.http.get(url).pipe(
       map(item => {
         return {
-          url: item['sprites']['front_default']
+          name: item['name'],
+          url: item['sprites']['front_default'],
+          pic: item['sprites']['other']['official-artwork']['front_default'],
+          stats: item['stats'],
+          types: item['types']
         }
       })
     )

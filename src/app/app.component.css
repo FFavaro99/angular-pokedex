@@ -1,6 +1,16 @@
 
+main {
+  display: flex;
+}
+
 .pokedex {
   overflow-y: scroll;
   height: 92vh;
-  width: 50vw;
+  width: 35vw;
+  display: inline-block;
+}
+
+.aside {
+  display: inline-block;
+  width: 62vw;
 }

@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { SelectionComponent } from './selection/selection.component';
 
 import { ApiRequestsService } from './services/api-requests.service';
+import { DetailsService } from './services/details.service';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,6 @@ import { ApiRequestsService } from './services/api-requests.service';
     ReactiveFormsModule
   ],
   providers: [ ApiRequestsService ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, DetailsService]
 })
 export class AppModule { }

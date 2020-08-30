@@ -9,15 +9,19 @@ import { ApiRequestsService } from '../services/api-requests.service';
 export class PokedexComponent implements OnInit {
 
   public pokedex;
+  public displayedPokedex;
 
-  constructor( private api: ApiRequestsService ) { }
+  constructor( private api: ApiRequestsService ) {
+    this.displayedPokedex = [];
+  }
 
   ngOnInit(): void {
-    this.api.getPokedexes().subscribe(
-      value => {
-        console.log(value);
-      }
-    )
+
+    // this.api.getPokedexes().subscribe(
+    //   value => {
+    //     console.log(value);
+    //   }
+    // );
 
 
     this.api.getPokedex(1).subscribe(
@@ -27,8 +31,17 @@ export class PokedexComponent implements OnInit {
           name: elem.pokemon_species.name,
           url: elem.pokemon_species.url
         }});
+        this.showMore();
       }
-    )
+    );
+
+  }
+
+  showMore(): void{
+    let finalIndex = this.displayedPokedex.length + 20;
+    for (let i = this.displayedPokedex.length; i < finalIndex; i++){
+      this.displayedPokedex.push(this.pokedex[i]);
+    }
   }
 
 

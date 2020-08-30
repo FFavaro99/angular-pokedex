@@ -4,3 +4,15 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+p {
+  margin: 1rem auto;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  color: #5995e4;
+}
+
+p:hover {
+  text-decoration: underline;
+}

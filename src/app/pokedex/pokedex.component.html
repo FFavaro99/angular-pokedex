@@ -1,2 +1,3 @@
 
-<app-pokemon *ngFor="let pokemon of pokedex" [name]="pokemon.name" [index]="pokemon.index"></app-pokemon>
+<app-pokemon *ngFor="let pokemon of displayedPokedex" [name]="pokemon.name" [index]="pokemon.index"></app-pokemon>
+<p (click)="showMore()">Show more Pokemons</p>

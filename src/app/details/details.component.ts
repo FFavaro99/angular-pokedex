@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DetailsService } from '../services/details.service';
 
 @Component({
   selector: 'app-details',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor() { }
+  public pokemon;
 
-  ngOnInit(): void {
+  constructor(private details: DetailsService) {
+    this.details.subject.subscribe( value => { this.pokemon = value });
   }
+
+  ngOnInit(): void {}
 
 }
